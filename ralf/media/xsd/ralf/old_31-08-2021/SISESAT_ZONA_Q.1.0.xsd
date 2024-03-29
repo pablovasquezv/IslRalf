@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_Q.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos para la zona Q del SISESAT - RALF</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-19</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_Q">
+		<xsd:sequence>
+			<xsd:element name="medidas_inmediatas">
+				<xsd:annotation>
+						<xsd:documentation>Identificación de las medidas inmediatas</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="medidas" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="medida" type="STTexto" minOccurs="0" maxOccurs="unbounded"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="fecha_notificacion_medidas_inmediatas" type="xsd:date" />
+						<xsd:element name="documentos_anexos">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="investigador" type="CTPersonaRALF" />
+						<xsd:element name="telefono_investigador" type="CTTelefono" minOccurs="0" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

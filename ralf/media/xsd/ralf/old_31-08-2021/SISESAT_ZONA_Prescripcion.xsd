@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_Prescripcion</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT para el documento RALF 145</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2018-01-08</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2018-01-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define la zona de prescripción del documento electronico RALF 145 de SISESAT.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_PRESCRIPCION">
+		<xsd:sequence>
+			<xsd:element name="fecha_prescripcion_medida" type="xsd:date"/>
+			<xsd:element name="prescripcion_medidas" type="CTPrescripcionMedida_RALF" maxOccurs="unbounded"/>
+			<xsd:element name="documentos_acompanan_prescripcion">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="investigador" type="CTPersonaRALF"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

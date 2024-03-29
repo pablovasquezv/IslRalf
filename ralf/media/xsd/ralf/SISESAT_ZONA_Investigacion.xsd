@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_Investigacion.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT para el documento RALF 143</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2018-01-08</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2018-01-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define la zona investigacion del documento electronico RALF 143 de SISESAT.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_INVESTIGACION">
+		<xsd:sequence>
+			<xsd:element name="investigacion_acc">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fecha_inicio_investigacion_acc" type="xsd:date"/>
+						<xsd:element name="fecha_termino_investigacion_acc" type="xsd:date"/>
+						<xsd:element name="hora_ingreso" type="xsd:time"/>
+						<xsd:element name="hora_salida" type="xsd:time"/>
+						<xsd:element name="jornada_momento_accidente" type="STTipoJornada"/>
+						<xsd:element name="jornada_momento_accidente_otro" type="STTexto" minOccurs="0"/>
+						<xsd:element name="trabajo_habitual_cual" type="STTexto"/>
+						<xsd:element name="trabajo_habitual" type="STSiNo"/>
+						<xsd:element name="antiguedad" type="CTAntiguedad"/>
+						<xsd:element name="lugar_trabajo" type="STLugarTrabajo"/>
+						<xsd:element name="nro_comites_funcio" type="xsd:nonNegativeInteger"/>
+						<xsd:element name="nro_comites_ds54_a1" type="xsd:nonNegativeInteger"/>
+						<xsd:element name="exist_comites_lugar_acc" type="STSiNoNc"/>
+						<xsd:element name="cumb_ob_info_ds40_a21" type="STSiNo"/>
+						<xsd:element name="reg_ohys_al_dia" type="STSiNo"/>
+						<xsd:element name="depto_pre_rie_teorico" type="STSiNo"/>
+						<xsd:element name="depto_pre_rie_real" type="STSiNo" minOccurs="0"/>
+						<xsd:element name="exp_pre_em" type="CTPersonaRALF" minOccurs="0"/>
+						<xsd:element name="tipo_cont_exp_pre_em" type="STTipoContratoExperto" minOccurs="0"/>
+						<xsd:element name="tipo_cont_exp_pre_em_otro" type="STTexto" minOccurs="0"/>
+						<xsd:element name="nro_dias_jor_parcial_cont_exp_pre_emp" type="STDiasJornadaParcial" minOccurs="0"/>
+						<xsd:element name="nro_reg_a_s_exp_pre_em" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="cat_exp_pre_em" type="STCategoriaExperto" minOccurs="0"/>
+						<xsd:element name="programa_pre_rie" type="STSiNo"/>
+						<xsd:element name="trabajador_reg_subcontratacion" type="STSiNo"/>
+						<xsd:element name="registro_ac_antec_a66bis" type="STSiNo" minOccurs="0"/>
+						<xsd:element name="comite_par_fae_emp_ppal" type="STSiNoNc"/>
+						<xsd:element name="depto_pre_rie_emp_ppal" type="STSiNoNc"/>
+						<xsd:element name="imp_sist_gest_sst_emp_ppal" type="STSiNoNc"/>
+						<xsd:element name="fiscalizacion_con_multas_mat_sst" type="STSiNo"/>
+						<xsd:element name="organismo_multas" type="STTexto" minOccurs="0"/>
+						<xsd:element name="circunstancias_accidente" type="STTexto"/>
+						<xsd:element name="desc_acc_invest" type="STTexto"/>
+						<xsd:element name="justificacion_no_laboral" type="STTexto"/>
+						<xsd:element name="vehiculo_involucrado" type="STSiNo"/>
+						<xsd:element name="codificacion_vehiculo_involucrado" type="CTCodificacion_Vehiculo_involucrado" minOccurs="0"/>
+						<xsd:element name="antecedentes_informacion_acc" type="STTexto"/>
+						<xsd:element name="investigador_acc" type="CTPersonaRALF"/>
+						<xsd:element name="prof_invest_acc" type="STTexto" minOccurs="0"/>
+						<xsd:element name="invest_es_experto" type="STSiNo"/>
+						<xsd:element name="categoria_experto" type="STCategoriaExperto" minOccurs="0"/>
+						<xsd:element name="nro_reg_a_s_invest_acc" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="documentos_acompanan_investigacion">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

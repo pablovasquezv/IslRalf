@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_Recargo_Tasa.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos para la zona Centro De Trabajo de EVAST</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2021-01-19</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_Recargo_Tasa">
+		<xsd:sequence>
+			<xsd:element name="Resolucion_recargo_tasa" type="CTResolucion_de_recargo"/>
+			<xsd:element name="Recargo_tasa" type="CTRecargo_tasa"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

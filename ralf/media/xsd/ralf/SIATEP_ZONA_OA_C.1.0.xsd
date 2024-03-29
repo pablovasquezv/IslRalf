@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_C.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.1</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_C">
+		<xsd:sequence>
+			<xsd:element name="empleado">
+				<xsd:annotation>
+					<xsd:documentation>Identificación del empleado (trabajador)</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						 <xsd:element name="trabajador" type="CTTrabajador"/>
+						<!-- <xsd:element name="trabajador" type="CTPersona"/> -->
+						<xsd:element name="codigo_etnia" type="STCodigo_etnia" minOccurs="0"/>
+						<xsd:element name="etnia_otro" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="direccion_trabajador" type="CTDireccion"/>
+						<xsd:element name="profesion_trabajador" type="STTexto"/>
+						<xsd:element name="ciuo_trabajador" type="STCIUO"/>
+						<xsd:element name="categoria_ocupacion" type="STCategoria_ocupacion"/>
+						<xsd:element name="duracion_contrato" type="STDuracion_contrato"/>
+						<xsd:element name="tipo_dependencia" type="STDependencia" minOccurs="0"/>
+						<xsd:element name="tipo_remuneracion" type="STRemuneracion"/>
+						<xsd:element name="fecha_ingreso" type="xsd:date"/>
+						<xsd:element name="telefono_trabajador" type="CTTelefono" minOccurs="0"/>
+						<xsd:element name="clasificacion_trabajador" type="STClasificacion_trabajador" minOccurs="0"/>
+						<xsd:element name="sistema_comun" type="STSistema_comun" minOccurs="0"/>																		
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

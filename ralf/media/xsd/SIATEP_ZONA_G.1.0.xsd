@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_G.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.4</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-02-28</fecha>
+					<Colaborador>Luis Baez</Colaborador>
+					<modificaciones>Se establece que pueden existir varias evaluaciones</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-01-24</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Código de diagnóstico y código de ubicación opcionales, diagnostico y ubicacion son STBase64Binary</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-02-10</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Código de diagnóstico, código de ubicación, diagnóstico y ubicación son del tipo CTCifrado</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_G">
+		<xsd:sequence>
+			<xsd:element name="evaluacion" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Identificación de la evaluacion (diagnostico), se entiende que la primera evaluación es la principal</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="diagnostico" type="CTCifrado"/>
+						<xsd:element name="codigo_diagnostico" type="CTCifrado" minOccurs="0"/>
+						<xsd:element name="ubicacion" type="CTCifrado"/>
+						<xsd:element name="codigo_ubicacion" type="CTCifrado" minOccurs="0"/>
+						<xsd:element name="fecha_diagnostico" type="xsd:date"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,81 @@
+.ms-container{
+  /*background: transparent url('../images/arrow.png') no-repeat 320px 83px;*/
+}
+
+.ms-container:after{
+  content: "."; display: block; height: 0; line-height: 0; font-size: 0; clear: both; min-height: 0; visibility: hidden;
+}
+
+.ms-container .ms-selectable, .ms-container .ms-selection{
+  width: 255px;
+  float: left;/*
+  border-radius:         4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius:    4px;
+  -khtml-border-radius:  4px;*/
+}
+
+.ms-selected{
+  display:none;
+}
+.ms-container .ms-selectable{
+  padding-right: 40px;
+  background: transparent url('../images/arrow.png') no-repeat center right;
+}
+
+.ms-container ul{
+  margin: 0;
+  list-style-type: none;
+}
+
+.ms-container ul.ms-list{
+  width: 255px;
+  height: 129px;
+  padding: 1px 0px;
+  
+  background: #fff;
+  border: 1px #ccc solid;
+  overflow-y: auto;
+
+}
+
+.ms-container .ms-selectable li.ms-elem-selectable,
+.ms-container .ms-selection li.ms-elem-selectable{
+  border-bottom: 1px #eee solid;
+  padding: 5px 10px;
+  color: #555;
+}
+
+.ms-container .ms-selection li.ms-elem-selected{
+  padding: 5px 10px 5px 22px;
+  color: #101010;
+  border-bottom: 1px #eee solid;
+}
+
+.ms-container .ms-selectable li.disabled,
+.ms-container .ms-selection li.disabled{
+  background-color: #eee;
+  color: #aaa;
+}
+
+.ms-container .ms-optgroup-label{
+  padding: 5px 0px 0px 20px;
+  background: transparent url('../images/plus.png') no-repeat 5px 10px;
+  cursor: pointer;
+  color: #999;
+}
+
+.ms-container .ms-optgroup-label.collapse{
+  background-image: url('../images/minus.png');
+}
+
+.ms-container li.ms-elem-selectable:not(.disabled):hover,
+.ms-container .ms-selection li:not(.disabled):hover{
+  cursor: pointer;
+  background-color: #eee;
+  color: #000;
+}
+
+.ms-container .ms-selection li:not(.disabled):hover{
+  background: #eee url('../images/delete-bin.png') no-repeat 3px 3px;
+}

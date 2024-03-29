@@ -1,0 +1,22 @@
+/*#main-wrapper { background: #F2F2F2 url('../images/fancybox-main-bg.png') center top repeat-y; }
+#main-wrapper div.top-bar { height: 25px; background: url('../images/body-bg.png') center top repeat-x; }
+
+#contenedor { width: 630px; margin: 0 auto;  height: auto;  }*/
+
+/**CUERPO**/
+/*#cuerpo { padding: 0 15px; clear: both;}*/
+/**FIN CUERPO**/
+
+/**CONTENIDO**/
+/*td.radio-check-wrap { background-color: #FFF; border: 1px solid #DDD; }
+label.requerido, label.no-requerido { padding-left: 12px; }
+label.requerido { background: url('../images/asterisco_normal.png') no-repeat center left; }
+
+#contenido { padding: 10px 0px }*/
+/**FIN CONTENIDO**/
+
+
+/**PIE**/
+/*#pie { clear: both; margin: 0 auto; overflow: hidden; margin-top: 0px !important; height: 18px; }
+#fondo-pie { height: 28px; background: #F2F2F2 url(../images/fancybox-footer.png) top center no-repeat; }*/
+/**FIN PIE**/

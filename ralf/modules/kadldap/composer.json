@@ -1,0 +1,30 @@
+{
+	"name": "samwilson/kohana_kadldap",
+	"type": "kohana-module",
+	"description": "Module for AD/LDAP support in Kohana 3 (includes an Auth driver).",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/samwilson/kohana_kadldap/issues",
+		"forum": "http://forum.kohanaframework.org",
+		"irc": "irc://irc.freenode.net/kohana",
+		"source": "https://github.com/samwilson/kohana_kadldap"
+	},
+	"authors": [
+		{
+			"name": "Beau Dacious (nocash)",
+			"email": "z727090@gmail.com",
+			"homepage": "http://cxzcxz.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Sam Wilson",
+			"email": "sam@samwilson.id.au",
+			"homepage": "http://samwilson.id.au",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"kohana/auth": "*",
+		"adldap/adldap": "dev-master"
+	}
+}

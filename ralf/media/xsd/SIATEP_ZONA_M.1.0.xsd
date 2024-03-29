@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_M.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.1</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_M">
+		<xsd:sequence>
+			<xsd:element name="resolucion_incapacidad_permanente">
+				<xsd:annotation>
+					<xsd:documentation>Identificación de resolucion de incapacidad permanente</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="solicitante" type="STSolicitante"/>
+						<xsd:element name="fecha_solicitud" type="xsd:date"/>
+						<xsd:element name="tipo_evaluacion" type="STEvaluacion"/>
+						<xsd:element name="origen_ultima_entidad" type="STSiNo"/>
+						<xsd:element name="rut_entidad" type="xsd:string"/>
+						<xsd:element name="nombre_entidad" type="xsd:string"/>
+						<xsd:element name="periodo_exposicion" type="STTexto"/>
+						<xsd:element name="multiple" type="STSiNo"/>
+						<xsd:element name="antecedentes_grado_incap" type="CTAntecedente_grado_inc"/>
+						<xsd:element name="codigo_secuela_funcion" type="STCIF"/>
+						<xsd:element name="codigo_secuela_estructura" type="STCIF"/>
+						<xsd:element name="codigo_secuela_actividad" type="STCIF"/>
+						<xsd:element name="codigo_secuela_factores_amb" type="STCIF"/>
+						<!--
+						<xsd:element name="ponderacion_sexo" type="xsd:decimal"/>
+						<xsd:element name="ponderacion_edad" type="xsd:decimal"/>
+						<xsd:element name="ponderacion_profesion" type="xsd:decimal"/>
+						<xsd:element name="otra_ponderacion" type="xsd:decimal"/>
+						<xsd:element name="grado_incapacidad" type="xsd:decimal"/>
+						-->
+						<xsd:element name="ponderacion_sexo">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0.1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ponderacion_edad">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0.1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ponderacion_profesion">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0.1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="otra_ponderacion">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0.1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="grado_incapacidad">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0.1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="grado_invalidez" type="STSiNo"/>
+						<xsd:element name="fecha_inicio_incapacidad" type="xsd:date"/>
+						<xsd:element name="observaciones" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

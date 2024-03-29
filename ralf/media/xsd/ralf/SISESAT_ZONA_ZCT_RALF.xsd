@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_ZCT.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos para la zona Centro De Trabajo de RALF (2018)</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2018-01-08</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2018-01-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define la zona del centro de trabajo del documento electronico RALF (2018) de SISESAT.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_ZCT_RALF">
+		<xsd:sequence>
+			<xsd:element name="centro_de_trabajo">
+				<xsd:annotation>
+					<xsd:documentation>Centro de trabajo</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CUV" type="STCUV"/>
+						<xsd:element name="estado_centro_trabajo" type="STEstadoCentroTrabajo"/>
+						<xsd:element name="rut_empleador_principal" type="STRut"/>
+						<xsd:element name="nombre_empleador_principal" type="STTexto"/>
+						<xsd:element name="nombre_centro_trabajo" type="STTexto"/>
+						<xsd:element name="correlativo_proyecto_contrato" type="xsd:positiveInteger"/>
+						<xsd:element name="tipo_empresa" type="STTipo_empresa"/>
+						<xsd:element name="geolocalizacion" type="CTGeolocalizacion"/>
+						<xsd:element name="direccion_centro_trabajo" type="CTDireccionCentroTrabajo"/>
+						<xsd:element name="descripcion_actividad_trabajadores_ct" type="STTexto"/>
+						<xsd:element name="n_trabajadores_propios_ct" type="xsd:positiveInteger"/>
+						<xsd:element name="n_trabajadores_hombre_ct" type="xsd:nonNegativeInteger"/>
+						<xsd:element name="n_trabajadores_mujer_ct" type="xsd:nonNegativeInteger"/>
+						<xsd:element name="com_par_constituido" type="STSiNoNc"/>
+						<xsd:element name="experto_prevencion_riesgos" type="STSiNo"/>
+						<xsd:element name="horas_semana_dedica_ct" type="xsd:positiveInteger" minOccurs="0"/>
+						<xsd:element name="fecha_inicio_ct" type="xsd:date"/>
+						<xsd:element name="tiene_fech_term" type="STSiNo"/>
+						<xsd:element name="fecha_termino_ct" type="xsd:date" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

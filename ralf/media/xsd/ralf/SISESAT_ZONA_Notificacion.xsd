@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_Notificacion.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT para el documento RALF 147</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2018-01-08</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2018-01-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2020-05-12</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>maxOccurs de aplicacion_multa pasa de 3 a unbounded</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define la zona de notificacion del documento electronico RALF 147 de SISESAT.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_NOTIFICACION_RALF">
+		<xsd:sequence>
+			<xsd:element name="causa_notificacion" type="STCausaNotificacion_RALF"/>
+			<xsd:element name="notificacion" type="CTNotificaAutoridad_RALF" maxOccurs="2"/>
+			<xsd:element name="aplicacion_multa" type="CTAplicacionMulta_RALF" maxOccurs="unbounded"/>
+			<xsd:element name="documentos_acompanan_notificacion">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="representante_oa" type="CTPersonaRALF"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>

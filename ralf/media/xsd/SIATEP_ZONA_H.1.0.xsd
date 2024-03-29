@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_H.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.3</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-02-28</fecha>
+					<Colaborador>Luis Baez</Colaborador>
+					<modificaciones>Se modifica obligatoriedad de codificaciones y se cambia el tipo Persona a Calificador</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2011-03-09</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Agregado tag "num_resol", tag "indicaciones" queda opcional</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_H">
+		<xsd:sequence>
+			<xsd:element name="resolucion">
+				<xsd:annotation>
+					<xsd:documentation>Identificación de la resolucion</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="num_resol" type="STTexto"/>
+						<xsd:element name="derivacion77" type="STSiNo"/>
+						<xsd:element name="tipo_acc_enf" type="STTipo_accidente_enfermedad"/>
+						<xsd:element name="indicaciones" type="STTexto" minOccurs="0"/>
+						<xsd:element name="codificacion_enfermedad" type="CTCodificacion_enfermedad" minOccurs="0"/>
+						<xsd:element name="codificacion_accidente" type="CTCodificacion_accidente" minOccurs="0"/>
+						<xsd:element name="calificador" type="CTCalificador"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

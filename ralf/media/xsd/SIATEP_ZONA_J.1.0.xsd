@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_J.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.2</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cambios a nombres de tags, agregada alta_inmediata</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-01-24</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Tag alta_inmediata obligatorio</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_J">
+		<xsd:sequence>
+			<xsd:element name="indicaciones_alta_laboral">
+				<xsd:annotation>
+					<xsd:documentation>Identificación de indicaciones de alta laboral</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fecha_alta_laboral" type="xsd:date"/>
+						<xsd:element name="alta_inmediata" type="STSiNo"/>
+						<xsd:element name="condiciones" type="STSiNo"/>
+						<xsd:element name="tipo_condicion" type="STTexto" minOccurs="0"/>
+						<xsd:element name="n_dias_periodo_condicion" type="xsd:positiveInteger" minOccurs="0"/>
+						<xsd:element name="continua_tratamiento" type="STSiNo"/>
+						<xsd:element name="tipo_tratamiento" type="STTexto" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_A.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_B.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_C.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_D.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_E.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_G.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_H.1.0.xsd"/>
+	<xsd:include schemaLocation="SIATEP_ZONA_O.1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_RECA_1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.3</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-02-28</fecha>
+					<Colaborador>Luis Baez</Colaborador>
+					<modificaciones>Se modifica la obligatoriedad de las zonas de accidente y enfermedad</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-04-26</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cambio XSD zona O, cambio nombre elemento CT_ZONA_O a CT_ZONA_O_ANTERIOR</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-06-01</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Zona G obligatoria, cambio XSD zona O (firma)</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2012-06-05</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Zona O obligatoria</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define los documentos electronicos de "Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)" en su totalidad haciendo referencia a los esquemas definidos para cada una de las zonas de los documentos electronica.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="RECA">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ZONA_A" type="CT_ZONA_A"/>
+				<xsd:element name="ZONA_B" type="CT_ZONA_B"/>
+				<xsd:element name="ZONA_C" type="CT_ZONA_C"/>
+				<xsd:element name="ZONA_D" type="CT_ZONA_D" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Debe venir cuando la contraloría médica cambia la naturaleza del origen de la denuncia, de enfermedad a accidente</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ZONA_E" type="CT_ZONA_E" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Debe venir cuando la contraloría médica cambia la naturaleza del origen de la denuncia, de accidente a enfermedad</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ZONA_G" type="CT_ZONA_G"/>
+				<xsd:element name="ZONA_H" type="CT_ZONA_H"/>
+				<xsd:element name="ZONA_O" type="CT_ZONA_O"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

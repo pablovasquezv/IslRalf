@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd" />
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_A.1.0.xsd" />
+	<xsd:include schemaLocation="SIATEP_ZONA_RALF_B.1.0.xsd" />
+	<xsd:include schemaLocation="SIATEP_ZONA_OA_C_old.1.0.xsd" />
+	<xsd:include schemaLocation="SIATEP_ZONA_O.1.0.xsd" />
+	<xsd:include schemaLocation="SISESAT_ZONA_P.1.0.xsd" />
+	<xsd:include schemaLocation="SISESAT_ZONA_Q.1.0.xsd" />
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_RALF_2.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT para el documento de medidas inmediatas (2)</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-19</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+				<Descripcion>Este esquema define el documento electronico 2 de SISESAT en su totalidad haciendo referencia a los esquemas definidos para cada una de las zonas de los documentos.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="ralf2">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ZONA_A" type="CT_ZONA_A" />
+				<xsd:element name="ZONA_B" type="CT_ZONA_B" />
+				<xsd:element name="ZONA_C" type="CT_ZONA_C" />
+				<xsd:element name="ZONA_P" type="CT_ZONA_P" />
+				<xsd:element name="ZONA_Q" type="CT_ZONA_Q" />
+				<xsd:element name="ZONA_O" type="CT_ZONA_O" minOccurs="0" />
+			</xsd:sequence>
+			<xsd:attribute name="id" use="required" />
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

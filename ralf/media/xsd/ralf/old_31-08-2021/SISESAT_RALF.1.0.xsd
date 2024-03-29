@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:include schemaLocation="SISESAT_ZONA_0.1.0.xsd"/>
+	<xsd:include schemaLocation="SISESAT_RALF_1.1.0.xsd"/>
+	<!--
+		<xsd:include schemaLocation="SISESAT_ZONA_2.1.0.xsd"/>
+		<xsd:include schemaLocation="SISESAT_ZONA_3.1.0.xsd"/>
+		<xsd:include schemaLocation="SISESAT_ZONA_4.1.0.xsd"/>
+		<xsd:include schemaLocation="SISESAT_ZONA_5.1.0.xsd"/>
+		<xsd:include schemaLocation="SISESAT_ZONA_6.1.0.xsd"/>
+	-->
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_RALF.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-09</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2012-10-10</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+				<Descripcion>Este esquema define los documentos electronicos de SISESAT en su totalidad haciendo referencia a los esquemas definidos para cada una de las zonas de los documentos electronica.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="RALF">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ZONA_0" type="CT_ZONA_0" />
+				<xsd:element name="RALF_1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ralf1" type="CT_RALF_1" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="RALF_2">
+					<!--
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ralf2" type="CT_RALF_2" minOccurs="0" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+					-->
+				</xsd:element>
+				<!--
+					<xsd:element name="RALF_3" minOccurs="0" />
+				-->
+				<xsd:element name="RALF_4">
+					<!--
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ralf4" type="CT_RALF_4" minOccurs="0" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+					-->
+				</xsd:element>
+				<xsd:element name="RALF_5">
+					<!--
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ralf5" type="CT_RALF_5" minOccurs="0" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+					-->
+				</xsd:element>
+				<xsd:element name="RALF_6">
+					<!--
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="ralf6" type="CT_RALF_6" minOccurs="0" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:complexType>
+					-->
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

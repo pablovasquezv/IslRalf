@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_D.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.1</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_D">
+		<xsd:sequence>
+			<xsd:element name="accidente">
+				<xsd:annotation>
+					<xsd:documentation>Identificación del accidente</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fecha_accidente" type="xsd:dateTime"/>
+						<xsd:element name="hora_ingreso" type="xsd:time" minOccurs="0"/>
+						<xsd:element name="direccion_accidente" type="CTDireccion"/>
+						<xsd:element name="lugar_accidente" type="STTexto" minOccurs="0"/>
+						<xsd:element name="que" type="STTexto" minOccurs="0"/>
+						<xsd:element name="como" type="STTexto"/>
+						<xsd:element name="trabajo_habitual_cual" type="STTexto" minOccurs="0"/>
+						<xsd:element name="trabajo_habitual" type="STSiNo" minOccurs="0"/>
+						<xsd:element name="gravedad" type="STCriterio_gravedad" minOccurs="0"/>
+						<xsd:element name="tipo_accidente" type="STTipo_accidente" minOccurs="0"/>
+						<xsd:element name="hora_salida" type="xsd:time" minOccurs="0"/>
+						<xsd:element name="tipo_accidente_trayecto" type="STTipo_accidente_trayecto" minOccurs="0"/>
+						<xsd:element name="medio_prueba" type="STMedio_prueba_accidente" minOccurs="0"/>
+						<xsd:element name="detalle_prueba" type="xsd:string" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

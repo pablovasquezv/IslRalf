@@ -1,0 +1,442 @@
+body {  font: 12px Normal, Arial, Helvetica, san-serif; color: #333; }
+#container { width: 940px;/*1000px*/ margin: 10px auto; padding: 10px; padding-bottom: 3px; border: 1px solid #AAA; }
+#header { width: 100%;  height: 40px; padding: 0; }
+#header h1 { color: #006CB7; font-weight: normal; line-height: 18px; font-size: 19px; margin: 0; text-align: center; }
+#header h1 span { text-transform: uppercase; }
+
+span.back-link { display: block; position: absolute; margin: 0 0 0 900px; font-size: 14px; text-transform: uppercase;}
+span.back-link a { color: #0645AD; text-decoration: none; font-weight: bold; }
+span.back-link a:hover { text-decoration: underline; }
+span.first-text { display: block; color: #555; font-size: 11px; font-weight: bold; text-align: center; padding-bottom: 10px}
+span.doc-anulado { display: block; margin: 5px 0 2px 0; text-align: center; color:red;  font-size: 13px; font-weight: bold; }
+
+
+
+/**CONTENIDO**/
+div#content { padding: 17px; }
+h2  { font-size: 0.9em; margin: 0.25em 0; text-transform: uppercase; color: #EF4144; }
+h4  { font-size: 1em; }
+ul  { list-style-type: none;  }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-top: none;
+  margin-top: 5px;
+  text-align: left;
+}
+table tr.label-row th {
+  padding: 2px 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #597e9d;
+  text-align: left!important;
+}
+table tr.data-row td {
+  height: 16px!important;
+  padding: 2px 3px;
+  color: #777;
+  font-weight: bold;
+  font-size: 11px;
+  border: 1px solid #CCC;
+  text-transform: uppercase;
+}
+table tr.data-row td.email {
+  text-transform: lowercase;
+}
+table.info-table tr.label-row th {
+  border: 1px solid #CCC;
+}
+table.info-table tr.last-row th {
+  height: 10px!important;
+  padding: 5px 0 0 0!important;
+}
+
+
+div.zona {
+  clear: both;
+  margin: 25px 0;
+  padding: 10px 0;
+  border-style: dotted;
+  border-width: 1px 0 1px 0;
+  border-color: #333;
+}
+
+div.zona span.hombres, div.zona span.mujeres,
+div.zona span.hombres span, div.zona span.mujeres span {
+  padding-right: 3px;
+  font-size: 10px
+}
+
+div.zona span.hombres span, div.zona span.mujeres span {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.pueblos {
+        width: 450px;
+        margin-left: -40px;
+        list-style: none;
+}
+ul.pueblos li {
+        display: block;
+        width: 150px;
+        height: 20px;
+        float: left;
+        list-style: none;
+}
+
+
+
+.clearfix {
+    clear: both;
+}
+/*
+.data-table{
+    border: 0;
+}
+
+.data-table td{
+    border: 1px solid #AAAAAA;
+}
+
+.data-table th{
+    border: 0;
+}
+*/
+.data-field {
+    border: 1px solid #AAAAAA;
+    margin: 10px 10px 0 0;
+    text-align: center;
+    height: 65px;
+}
+
+.data-field h4{
+    border-bottom: 1px solid #AAAAAA;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 4px 0;
+}
+
+.codigo {
+    border: 1px dotted #000000;
+    height: 20px;
+    line-height: 22px;
+    width: 25px;
+    text-align:center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.zona-interior {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.zona-resolucion .codigo_tipo_acc_enf table{
+    width: auto;
+}
+
+.zona-resolucion .codigo{
+    float: left;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.zona-resolucion .glosas-calif{
+    float: left;
+    padding-left: 25px;
+    margin-left: 0;
+}
+
+.boolean-field{
+    width: 105px;
+    clear: right;
+    margin: 0 auto;
+}
+
+.boolean-field .nombre-si{
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 3px;
+    float: left;
+}
+
+.boolean-field .nombre-no{
+    margin-left: 5px;
+    margin-top: 3px;
+    float: left;
+}
+
+.boolean-field .codigo{
+    float: left;
+}
+
+/* Zona alta laboral */
+.alta-inmediata,
+.fecha-alta-laboral{
+    width: 150px;
+    float: left;
+    margin-top: 0px;
+}
+
+.dias-periodo-condicion{
+    height: 78px;
+    float: left;
+    width: 75px;
+}
+
+.condiciones,
+.continua-tratamiento{
+    width: 220px;
+    height: 78px;
+    float: left;
+    clear: both;
+}
+
+.tipo-condicion{
+    width: 62%;
+}
+
+.tipo-tratamiento{
+    width: 72%;
+}
+
+.tipo-condicion,
+.tipo-tratamiento{
+    float: left;
+    margin-top: 10px;
+}
+
+.tipo-condicion td,
+.tipo-tratamiento td{
+    height: 65px;
+    vertical-align: top;
+}
+
+/* Zona alta medica */
+.fecha-alta-medica{
+    width: 105px;
+    float: left;
+    margin-top: 0px;
+}
+
+.tipo-alta-medica{
+    width: 320px;
+    float: left;
+    margin-top: 0px;
+    height: 120px;
+}
+
+.tipo-alta-medica .codigo{
+    float: left;
+    margin-left: 15px;
+}
+
+.tipo-alta-medica ul{
+    float:left;
+    margin: 0;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.evaluacion-incapacidad {
+    float: left;
+    width: 200px;
+    margin-top: 0;
+}
+
+.otro-motivo-alta {
+    float: left;
+    width: 195px;
+    margin-top: 0;
+}
+
+.otro-motivo-alta td{
+    height: 49px;
+    vertical-align: top;
+}
+
+.zona-seguridad ul{
+    margin-top: 3px;
+}
+
+.zona-diagnostico .fecha-diagnostico {
+	width: 140px;
+}
+
+
+div.firma {
+  width: 250px;
+  float: right;
+  margin: 5px 0;
+  text-align: center;
+}
+div.firma label {
+  padding: 2px 0;
+}
+div.firma label.firma-texto {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  color: #597E9D!important;
+}
+div.firma label.line {
+  display: block;
+  color: #888
+}
+div.firma h4 {
+  margin: 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #597E9D;
+}
+div.firma label.con-certificado {
+  display: inline-block;
+  font-size: 11px;
+  color: #666
+}
+div.firma label.con-certificado span {
+  font-weight: bold;
+}
+div.firma label.con-rsa-key {
+  display: inline-block;
+  color: #888;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.clear-both {
+  clear: both
+}
+div.fechas-y-horarios,
+div.relatores {
+  float: left;
+}
+div.relatores {
+  width: 620px;
+  margin-left: 10px;
+}
+
+div.fechas-y-horarios table tr th,
+div.relatores table tr th {
+  padding: 2px 3px 1px 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #597e9d;
+  text-align: left!important;
+  border: 1px solid #DDD;
+}
+
+div.fechas-y-horarios table tr td,
+div.relatores table tr td {
+  padding: 2px 3px 1px 3px;
+  border: 1px solid #DDD;
+  text-transform: lowercase;
+}
+
+div.fechas-y-horarios table { width: 350px; }
+div.relatores table { width: 100%; }
+
+div.relatores table tr th.nombres { width: 50px  }
+div.relatores table tr th.rut { width: 20px  }
+div.relatores table tr th.grado { width: 40px  }
+
+p.nombre-capacitado {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #006cb7;
+}
+p.nombre-capacitado label {
+  padding-left: 10px;
+}
+table.persona {
+  width: 470px;
+  margin-right: 10px;
+  border: 1px solid #DDD;
+  float: left;
+}
+
+table.empresa {
+  width: 500px;
+  border: 1px solid #DDD;
+  float: left;
+}
+
+table.persona tr th,
+table.empresa tr th,
+table.resultado tr th {
+  width: 120px;
+  padding: 2px 3px 1px 3px;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #597e9d;
+  text-align: left!important;
+  border: 1px solid #DDD;
+}
+table.persona tr td,
+table.empresa tr td,
+table.resultado tr td {  
+  padding: 2px 3px 1px 3px;
+  border: 1px solid #DDD;
+  text-transform: lowercase;
+}
+/*
+table.resultado tr .aprobado {
+  width: 100px;
+}
+table.resultado tr .motivo {
+  width: 880px;
+}*/
+/*
+table tr th.first-column {
+  width: 30px
+}
+table tr td.second-column {
+  width: 300px
+}
+table tr th.third-column {
+  width: 90px
+}
+table tr td.fourth-column {
+  width: 200px
+}
+table tr td.fifth-column {
+  width: 110px
+}
+table tr td.sixth-column {
+  width: 220px
+}*/

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="SIATEP_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_B.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del Sistema de Informacion de Accidentes del Trabajo y Enfermedades Profesionales (SIATEP)</Titulo>
+				<Autor>Aditiva S.A.</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2008-12-22</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.2</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2010-04-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>n_trabajadores_hombre y n_trabajadores_mujer pueden ser 0</modificaciones>
+				</Modificado>
+				<Modificado>
+					<fecha>2011-09-06</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Uso de STTexto</modificaciones>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_B">
+		<xsd:sequence>
+			<xsd:element name="empleador">
+				<xsd:annotation>
+					<xsd:documentation>Identificación del empleador</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="rut_empleador" type="STRut" minOccurs="0"/>
+						<xsd:element name="nombre_empleador" type="STTexto" />
+						<xsd:element name="direccion_empleador" type="CTDireccion" minOccurs="0"/>
+						<xsd:element name="ciiu_empleador" type="STCIIU" minOccurs="0"/>
+						<xsd:element name="ciiu_texto" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="n_trabajadores" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="n_trabajadores_hombre" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="n_trabajadores_mujer" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="tipo_empresa" type="STTipo_empresa" minOccurs="0"/>
+						<xsd:element name="ciiu2_empleador" type="STCIIU" minOccurs="0"/>
+						<xsd:element name="ciiu2_texto" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="propiedad_empresa" type="STPropiedad_empresa" minOccurs="0"/>
+						<xsd:element name="telefono_empleador" type="CTTelefono" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute name="id" use="optional"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

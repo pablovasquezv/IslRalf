@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_T.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos para la zona T del SISESAT - RALF</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-23</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_T">
+		<xsd:sequence>
+			 <xsd:element name="acciones_adoptadas">
+				<xsd:annotation>
+					<xsd:documentation>Información de acciones adoptadas</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fecha_informe_acciones_adoptadas" type="xsd:date" />
+						<xsd:element name="constatacion_incumplimiento_medidas" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="medidas_no_implementadas" type="CTVerificacionMedidas" />
+									<xsd:element name="medidas_no_implementadas_plazo_ampliado" type="CTVerificacionMedidas" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="aplicacion_multa_art_80_ley" type="STSiNo" />
+						<xsd:element name="monto_multa" type="xsd:nonNegativeInteger" minOccurs="0" />
+						<xsd:element name="fecha_multa" type="xsd:date" minOccurs="0" />
+						<xsd:element name="recargo_ds67_a15" type="STSiNo" />
+						<xsd:element name="recargo_ds67_a5" type="STSiNoNc" />
+						<xsd:element name="fecha_inicio_recargo_a15" type="xsd:date" minOccurs="0" />
+						<xsd:element name="fecha_termino_recargo_a15" type="xsd:date" minOccurs="0" />
+						<xsd:element name="comunicacion_dir_trabajo" type="STSiNo" />
+						<xsd:element name="nro_comunic_dir_trabajo" type="xsd:nonNegativeInteger" minOccurs="0" />
+						<xsd:element name="fecha_comunic_dir_trabajo" type="xsd:date" minOccurs="0" />
+						<xsd:element name="comunicacion_seremi" type="STSiNo" />
+						<xsd:element name="identificacion_seremi" type="STNumSEREMI" minOccurs="0" />
+						<xsd:element name="nro_comunic_seremi" type="xsd:nonNegativeInteger" minOccurs="0" />
+						<xsd:element name="fecha_comunic_seremi" type="xsd:date" minOccurs="0" />
+						<xsd:element name="plan_esp_trabajo_empresa" type="STSiNo" />
+						<xsd:element name="fecha_ini_plan_trabajo_empresa" type="xsd:date" minOccurs="0" />
+						<xsd:element name="resumen_plan_trabajo" type="STTexto" minOccurs="0" />
+						<xsd:element name="documentos_anexos">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="representante_oa" type="CTPersonaRALF" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

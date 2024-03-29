@@ -1,0 +1,1238 @@
+div#denuncia-electronica {
+    font: Normal 12px "gobCL", verdana, arial, helvetica, sans-serif!important;
+    color: #848484;
+    line-height: 18px;
+}
+div#denuncia-electronica div.field, 
+div#denuncia-electronica div.actions {
+    margin-bottom: 10px;
+}
+
+div#denuncia-electronica h3 {
+    font-size: 19px!important;
+    line-height: 110%!important;
+    font-weight: normal!important;
+    font-style: normal!important;
+    text-align: left!important;
+    margin-top: 2px!important;
+    margin-bottom: 5px!important;
+    font-family: 'gobCL', Verdana!important;
+    color: #848484!important;
+}
+
+div#denuncia-electronica h3.tit-diag { margin-top: 0!important; margin-bottom: 0!important; padding: 0!important; }
+div#denuncia-electronica h4.sub-diag { margin: 0 0 15px 0!important; font: Normal 11px sans-serif; }
+div#denuncia-electronica h4 { margin: 0 0 3px 0!important; }
+
+form .row {
+    width: 100%;
+    overflow: auto;
+    display: block;
+}
+form .form_section_container {
+    background: transparent;
+    border: solid 1px #eaeaea;
+    margin-bottom: 16px;
+}
+form .form_section {
+    background: #f6f6f6;
+    margin: 2px;
+    padding: 5px;
+    overflow: auto;
+}
+form .field .protected_field {
+    background-color: white;
+    text-align: left;
+    border: 1px dotted #AAA;
+    border-radius: 2px;
+}
+form .field input, form .field textarea, form .field select, form .field select option {
+    border: 1px solid #888;
+    border-radius: 2px;
+    background-color: white;
+}
+form .field select {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+form .field input, form .field .protected_field, form .field textarea {
+    margin-right: 5px;
+    padding: 3px;
+}
+form .field input {
+    height: 14px;
+}
+form .field textarea {
+    height: 60px;
+}
+
+form .blank_field { height: 15px; }
+
+
+
+
+
+
+/**DOCUMENTO**/
+
+form .document_data {
+    overflow: auto;
+}
+
+form .document_data .field {
+    float: left;
+}
+
+form .document_data .cun {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .document_data .cun .protected_field {
+    width: 223px;
+}
+
+form .document_data .codigo_caso {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .document_data .codigo_caso .protected_field {
+    width: 223px;
+}
+
+form .document_data .folio {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .document_data .folio .protected_field {
+    width: 223px;
+}
+
+form .document_data .fecha_emision {
+    width: 229px; /*229*/
+    margin-right: 5px;
+}
+
+form .document_data .fecha_emision .protected_field {
+    width: 223px; /*223*/
+}
+
+/***ALTA LABORAL***/
+
+form .alta_laboral {
+    overflow: auto;
+}
+
+form .alta_laboral .field {
+    float: left;
+}
+
+form .alta_laboral div.fecha_alta_laboral {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.fecha_alta_laboral .protected_field {
+    width: 223px;
+}
+
+form .alta_laboral div.alta_inmediata {
+    width: 115px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.alta_inmediata .protected_field {
+    width: 109px;
+}
+
+form .alta_laboral div.condiciones_alta {
+    width: 115px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.condiciones_alta .protected_field {
+    width: 109px;
+}
+
+form .alta_laboral div.tipo_condicion_alta {
+    width: 455px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.tipo_condicion_alta .protected_field {
+    width: 449px;
+}
+
+form .alta_laboral div.dias_periodo_condicion {
+    width: 200px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.dias_periodo_condicion .protected_field {
+    width: 194px;
+}
+
+form .alta_laboral div.continua_tratamiento_laboral {
+    width: 200px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.continua_tratamiento_laboral .protected_field {
+    width: 194px;
+}
+
+form .alta_laboral div.tipo_tratamiento_laboral {
+    width: 519px;
+    margin-right: 5px;
+}
+
+form .alta_laboral div.tipo_tratamiento_laboral .protected_field {
+    width: 513px;
+}
+
+
+/***DOCTOR***/
+
+form .incapacidad_temporal {
+    overflow: auto;
+}
+
+form .incapacidad_temporal .field {
+    float: left;
+}
+
+form .incapacidad_temporal div.fecha_inicio_incapacidad {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .incapacidad_temporal div.fecha_inicio_incapacidad .protected_field {
+    width: 223px;
+}
+
+form .incapacidad_temporal div.fecha_termino_incapacidad {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .incapacidad_temporal div.fecha_termino_incapacidad .protected_field {
+    width: 223px;
+}
+
+form .incapacidad_temporal div.cantidad_dias_incapacidad {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .incapacidad_temporal div.cantidad_dias_incapacidad .protected_field {
+    width: 223px;
+}
+
+
+/***ALTA MEDICA***/
+
+form .alta_medica {
+    overflow: auto;
+}
+
+form .alta_medica .field {
+    float: left;
+}
+
+form .alta_medica div.fecha_alta_medica {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .alta_medica div.fecha_alta_medica .protected_field {
+    width: 223px;
+}
+
+form .alta_medica div.tipo_alta_medica {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .alta_medica div.tipo_alta_medica .protected_field {
+    width: 223px;
+}
+
+form .alta_medica div.otra_alta_medica {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .alta_medica div.otra_alta_medica .protected_field {
+    width: 223px;
+}
+
+form .alta_medica div.evaluacion_incapacidad {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .alta_medica div.evaluacion_incapacidad .protected_field {
+    width: 223px;
+}
+
+
+/***DOCTOR***/
+
+form .doctor {
+    overflow: auto;
+}
+
+form .doctor .field {
+    float: left;
+}
+
+form .doctor div.nombres {
+    width: 229px; /*229*/
+    margin-right: 5px;
+}
+
+form .doctor div.nombres .protected_field {
+    width: 223px;
+}
+
+form .doctor div.apellido_paterno {
+    width: 229px; /*229*/
+    margin-right: 5px;
+}
+
+form .doctor div.apellido_paterno .protected_field {
+    width: 223px;
+}
+
+form .doctor div.apellido_materno {
+    width: 229px; /*229*/
+    margin-right: 5px;
+}
+
+form .doctor div.apellido_materno .protected_field {
+    width: 223px;
+}
+
+form .doctor div.rut {
+    width: 229px; /*229*/
+    margin-right: 5px;
+}
+
+form .doctor div.rut .protected_field {
+    width: 223px;
+}
+
+/***EMPLEADOR***/
+
+
+form .employer {
+    overflow: auto;
+}
+
+form .employer .field {
+    float: left;
+}
+
+form .employer div.nombre {
+    width: 697px;
+    margin-right: 5px;
+}
+
+form .employer div.nombre .protected_field {
+    width: 691px;
+}
+
+form .employer div.rut {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.rut .protected_field {
+    width: 223px;
+}
+
+form .employer div.telephone {
+    float: left;
+    overflow-x: hidden;
+}
+
+form .employer div.codigo_tipo_empresa {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.codigo_tipo_empresa .protected_field {
+    width: 223px;
+}
+
+form .employer div.codigo_propiedad_empresa {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.codigo_propiedad_empresa .protected_field {
+    width: 223px;
+}
+
+form .employer div.n_trabajadores_hombre {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.n_trabajadores_hombre .protected_field {
+    width: 223px;
+}
+
+form .employer div.n_trabajadores_mujer {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.n_trabajadores_mujer .protected_field {
+    width: 223px;
+}
+
+form .employer div.ciiu {
+    /*width: 229px;*/
+    /*margin-right: 5px;*/
+}
+
+form .employer div.ciiu .protected_field {
+    width: 457px;
+}
+
+form .employer div.ciiu_desc {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.ciiu_desc .protected_field {
+    width: 223px;
+}
+
+form .employer div.ciiu_secundario {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.ciiu_secundario .protected_field {
+    width: 457px;
+}
+
+form .employer div.ciiu_secundario_desc {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employer div.ciiu_secundario_desc .protected_field {
+    width: 223px;
+}
+
+/**ADDRESSES**/
+
+form .address div.codigo_tipo_calle, form div .address div.codigo_tipo_calle {
+    width: 73px;
+    margin-right: 5px;
+}
+
+form .address div.codigo_tipo_calle .protected_field, form div .address div.codigo_tipo_calle .protected_field {
+    width: 67px;
+}
+
+form .address div.nombre, form div .address div.nombre {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .address div.nombre .protected_field, form div .address div.nombre .protected_field {
+    width: 145px;
+}
+
+form .address div.numero, form div .address div.numero {
+    width: 63px;
+    margin-right: 5px;
+}
+
+form .address div.numero .protected_field, form div .address div.numero .protected_field {
+    width: 57px;
+}
+
+form .address div.resto_direccion, form div .address div.resto_direccion {
+    width: 161px;
+    margin-right: 5px;
+}
+
+form .address div.resto_direccion .protected_field, form div .address div.resto_direccion .protected_field {
+    width: 155px;
+}
+
+form .address div.localidad, form div .address div.localidad {
+    width: 73px;
+    margin-right: 5px;
+}
+
+form .address div.localidad .protected_field, form div .address div.localidad .protected_field {
+    width: 67px;
+}
+
+form .address div.codigo_comuna, form div .address div.codigo_comuna {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .address div.codigo_comuna .protected_field, form div .address div.codigo_comuna .protected_field {
+    width: 145px;
+}
+
+.comuna_select {
+    width: 145px;
+}
+
+.pais_nacionalidad_select {
+    width: 145px;
+}
+
+
+/***TELEFONOS*/
+
+form .telephone {
+    float: left;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+form .telephone .field {
+    float: left;
+    width: 73px;
+    margin-right: 5px;
+}
+
+form .telephone .field .protected_field {
+    width: 67px;
+}
+
+form .telephone .field.numero {
+    float: left;
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .telephone .field.numero .protected_field {
+    width: 145px;
+}
+
+/**EMPLEADO**/
+
+
+form .employee {
+    overflow: auto;
+}
+
+form .employee .field {
+    float: left;
+}
+
+form .employee div.nombres {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.nombres .protected_field {
+    width: 223px;
+}
+
+form .employee div.apellido_paterno {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.apellido_paterno .protected_field {
+    width: 223px;
+}
+
+form .employee div.apellido_materno {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.apellido_materno .protected_field {
+    width: 223px;
+}
+
+form .employee div.rut {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.rut .protected_field {
+    width: 223px;
+}
+
+form .employee div.codigo_sexo {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_sexo .protected_field {
+    width: 145px;
+}
+
+form .employee div.edad {
+    width: 73px;
+    margin-right: 5px;
+}
+
+form .employee div.edad .protected_field {
+    width: 67px;
+}
+
+form .employee div.codigo_nacionalidad {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_nacionalidad .protected_field {
+    width: 145px;
+}
+
+form .employee div.codigo_etnia {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_etnia .protected_field {
+    width: 145px;
+}
+
+form .employee div.otra_etnia {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.otra_etnia .protected_field {
+    width: 145px;
+}
+
+form .employee div.profesion {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.profesion .protected_field {
+    width: 223px;
+}
+
+form .employee div.codigo_ciuo {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_ciuo .protected_field {
+    width: 457px;
+}
+
+form .employee div.codigo_categoria_ocupacion {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_categoria_ocupacion .protected_field {
+    width: 223px;
+}
+
+form .employee div.codigo_duracion_contrato {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_duracion_contrato .protected_field {
+    width: 145px;
+}
+
+form .employee div.codigo_tipo_dependencia {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_tipo_dependencia .protected_field {
+    width: 145px;
+}
+
+form .employee div.codigo_tipo_remuneracion {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_tipo_remuneracion .protected_field {
+    width: 145px;
+}
+
+form .employee div.codigo_clasificacion_trabajador {
+    width: 151px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_clasificacion_trabajador .protected_field {
+    width: 145px;
+}
+
+form .employee div.codigo_sistema_salud_comun {
+    width: 73px;
+    margin-right: 5px;
+}
+
+form .employee div.codigo_sistema_salud_comun .protected_field {
+    width: 67px;
+}
+
+form .employee div.fecha_nacimiento, form .employee div.fecha_ingreso {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .employee div.fecha_nacimiento .protected_field, form .employee div.fecha_ingreso .protected_field {
+    width: 223px;
+}
+
+/**ACCIDENTE**/
+
+form .accident {
+    overflow: auto;
+}
+
+form .accident .field {
+    float: left;
+}
+
+form .accident div.fecha {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .accident div.fecha .protected_field {
+    width: 457px;
+}
+
+form .accident div.fecha-pdf {
+    width: 150px;
+
+}
+
+form .accident div.fecha-pdf .protected_field {
+    width: 150px;
+}
+
+form .accident div.hora_ingreso_trabajo {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .accident div.hora_ingreso_trabajo .protected_field {
+    width: 223px;
+}
+
+form .accident div.hora_salida_trabajo {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .accident div.hora_salida_trabajo .protected_field {
+    width: 223px;
+}
+
+form .accident div.que_estaba_haciendo {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .accident div.que_estaba_haciendo .protected_field {
+    width: 457px;
+}
+
+form .accident div.lugar_accidente {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .accident div.lugar_accidente .protected_field {
+    width: 457px;
+}
+
+form .accident div.como_ocurrio {
+    width: 931px;
+    margin-right: 5px;
+}
+
+form .accident div.como_ocurrio .protected_field {
+    width: 925px;
+}
+
+form .accident div.trabajo_habitual {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .accident div.trabajo_habitual .protected_field {
+    width: 457px;
+}
+
+form .accident div.desarrollaba_trabajo_habitual {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .accident div.desarrollaba_trabajo_habitual .protected_field {
+    width: 457px;
+}
+
+form .accident div.accident_clasification_id {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .accident div.accident_clasification_id .protected_field {
+    width: 301px;
+}
+
+form .accident div.accident_type_id {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .accident div.accident_type_id .protected_field {
+    width: 301px;
+}
+
+form .accident div.accident_type_journey_id {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .accident div.accident_type_journey_id .protected_field {
+    width: 301px;
+}
+
+form .accident div.type_of_proof_id {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .accident div.type_of_proof_id .protected_field {
+    width: 301px;
+}
+
+form .accident div.proof_detail {
+    width: 619px;
+    margin-right: 5px;
+}
+
+form .accident div.proof_detail .protected_field {
+    width: 613px;
+}
+
+/**DENUNCIANTE**/
+
+form .complainant {
+    overflow: auto;
+}
+
+form .complainant .field {
+    float: left;
+}
+
+form .complainant div.nombre_completo {
+    width: 647px;
+    margin-right: 5px;
+}
+
+form .complainant div.nombre_completo .protected_field {
+    width: 641px;
+}
+
+form .complainant div.run {
+    width: 109px;
+    margin-right: 5px;
+}
+
+form .complainant div.run .protected_field {
+    width: 103px;
+}
+
+form .complainant div.complainant_classification_id {
+    width: 927px;
+    margin-right: 5px;
+}
+
+form .complainant div.complainant_classification_id .protected_field {
+    width: 921px;
+}
+
+/**ENFERMEDAD*/
+
+
+form .disease {
+    overflow: auto;
+}
+
+form .disease .field {
+    float: left;
+}
+
+form .disease div.sintomas {
+    width: 931px;
+    margin-right: 5px;
+}
+
+form .disease div.sintomas .protected_field {
+    width: 925px;
+}
+
+form .disease div.fecha_sintoma {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .disease div.fecha_sintoma .protected_field {
+    width: 301px;
+}
+
+form .disease div.antecedentes_previos {
+    width: 385px;
+    margin-right: 5px;
+}
+
+form .disease div.antecedentes_previos .protected_field {
+    width: 379px;
+}
+
+form .disease div.parte_del_cuerpo {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .disease div.parte_del_cuerpo .protected_field {
+    width: 223px;
+}
+
+form .disease div.descripcion_trabajo {
+    width: 931px;
+    margin-right: 5px;
+}
+
+form .disease div.descripcion_trabajo .protected_field {
+    width: 925px;
+}
+
+form .disease div.puesto_trabajado {
+    width: 619px;
+    margin-right: 5px;
+}
+
+form .disease div.puesto_trabajado .protected_field {
+    width: 613px;
+}
+
+form .disease div.antecedentes_companero {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .disease div.antecedentes_companero .protected_field {
+    width: 301px;
+}
+
+form .disease div.agente_sospechoso {
+    width: 619px;
+    margin-right: 5px;
+}
+
+form .disease div.agente_sospechoso .protected_field {
+    width: 613px;
+}
+
+form .disease div.fecha_agente {
+    width: 307px;
+    margin-right: 5px;
+}
+
+form .disease div.fecha_agente .protected_field {
+    width: 301px;
+}
+
+form .disease #complaint_diep_attributes_disease_attributes_fecha_sintoma_2i {
+    width: 80px;
+}
+
+
+/*RESOLUTION*/
+
+form .resolution {
+    overflow: auto;
+}
+
+form .resolution .field {
+    float: left;
+}
+
+form .resolution div.numero {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .resolution div.numero .protected_field {
+    width: 223px;
+}
+
+form .resolution div.derivacion { width: 229px; margin-right: 5px; }
+form .resolution div.derivacion .protected_field { width: 223px; }
+form .resolution select.derivacion { width: 231px; height: 22px; margin-top: 0; }
+
+form .resolution div.tipo_accidente_enfermedad {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .resolution div.tipo_accidente_enfermedad .protected_field {
+    width: 457px;
+}
+
+form .resolution div.indicacion {
+    width: 931px;
+    margin-right: 5px;
+}
+
+form .resolution div.indicacion .protected_field {
+    width: 925px;
+}
+
+
+
+
+
+
+
+/**CALIFICADOR*/
+
+form .qualifier {
+    overflow: auto;
+}
+
+form .qualifier .field {
+    float: left;
+}
+
+form .qualifier div.nombres {
+    width: 463px;
+    margin-right: 5px;
+}
+
+form .qualifier div.nombres .protected_field {
+    width: 457px;
+}
+
+form .qualifier div.apellido_paterno {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.apellido_paterno .protected_field {
+    width: 223px;
+}
+
+
+form .qualifier div.apellido_materno {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.apellido_materno .protected_field {
+    width: 223px;
+}
+
+form .qualifier div.rut {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.rut .protected_field {
+    width: 223px;
+}
+
+form .qualifier div.codigo_sexo {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.codigo_sexo .protected_field {
+    width: 223px;
+}
+
+form .qualifier div.fecha_nacimiento {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.fecha_nacimiento .protected_field {
+    width: 223px;
+}
+
+form .qualifier div.codigo_nacionalidad {
+    width: 229px;
+    margin-right: 5px;
+}
+
+form .qualifier div.codigo_nacionalidad .protected_field {
+    width: 223px;
+}
+
+/**EVALUACION*/
+
+form .evaluation { overflow: auto; }
+form .evaluation .field { float: left; }
+
+form .evaluation div.diagnostico { width: 931px; margin-right: 5px;  }
+form .evaluation div.diagnostico .protected_field { width: 925px; }
+
+form .evaluation div.codigo_diagnostico { width: 229px; margin-right: 5px;  }
+form .evaluation div.codigo_diagnostico .protected_field { width: 223px; }
+form .evaluation input.codigo_diagnostico { width: 223px; }
+
+
+form .evaluation div.ubicacion_lesion { width: 463px; margin-right: 5px;  }
+form .evaluation div.ubicacion_lesion .protected_field { width: 457px; }
+
+form .evaluation div.fecha_diagnosticon { width: 229px; margin-right: 5px;  }
+form .evaluation div.fecha_diagnostico .protected_field { width: 223px; }
+
+/*AGENTE ENFERMEDAD*/
+form .disease_agent { overflow: auto; }
+form .disease_agent .field { float: left; }
+
+form .disease_agent div.disease_agent_code { width: 931px; margin-right: 5px;  }
+form .disease_agent div.disease_agent_code .protected_field { width: 931px; }
+form .disease_agent input { width: 931px; }
+
+
+/*CODIFICACION ACCIDENTE*/
+form .cod_accident { overflow: auto; }
+form .cod_accident .field { float: left; }
+
+form .cod_accident div.codigo_forma { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_forma .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_contraparte { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_contraparte .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_agente_accidente { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_agente_accidente .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_modo_transporte { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_modo_transporte .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_tipo_evento { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_tipo_evento .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_papel_lesionado { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_papel_lesionado .protected_field { width: 457px; }
+
+form .cod_accident div.codigo_intencionalidad { width: 463px; margin-right: 5px;  }
+form .cod_accident div.codigo_intencionalidad .protected_field { width: 457px; }
+
+form .cod_accident select { width: 463px!important; margin-right: 5px; }
+
+
+form .tipo_accidente {
+    
+    height: 150px;
+}
+
+div.datos-resolucion {
+    background: #F6F6F6;
+    margin: 2px;
+    padding: 5px;
+    overflow: auto;
+}
+
+form .tipo_accidente div.conclusion,
+form .tipo_accidente div.lista1,
+form .tipo_accidente div.lista2 {
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+    background: #FFF;
+    border: 1px solid #AAA;
+}
+form .tipo_accidente div.conclusion {
+    width: 210px;
+}
+form .tipo_accidente div.conclusion span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #AAA;
+}
+form .tipo_accidente div.lista1 {
+    width: 290px;
+}
+
+form .tipo_accidente div.lista2 {
+    width: 400px;
+}
+
+form div.indicaciones {
+    width: 97%;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #AAA;
+
+}
+
+form div.indicaciones-wrap label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+form div.administrador {
+    width: 97%;
+    height: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #FFF;
+    border: 1px solid #AAA;
+
+}
+
+form div.administrador-wrap,
+form div.firma ,
+form div.firma span {
+
+    float: left;
+}
+
+form div.administrador-wrap {
+    display: block;
+    width: 82%;
+    text-align: center;
+    font-weight: bold;
+}
+
+form div.firma {
+    width: 90px;
+}
+form div.firma span {
+    display: block;
+    padding: 30px 50px;
+    line-height: 80%;
+    text-align: center;
+    border: 1px solid #AAA;
+}

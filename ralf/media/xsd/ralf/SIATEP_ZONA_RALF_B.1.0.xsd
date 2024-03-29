@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SIATEP_ZONA_B.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos del SISESAT para el documento RALF (2018)</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2018-01-08</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2018-01-08</fecha>
+					<Colaborador>BinaryBag</Colaborador>
+					<modificaciones>Cuando corresponda</modificaciones>
+				</Modificado>
+				<Descripcion>Este esquema define la zona de empleador del documento electronico RALF (2018) de SISESAT.</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_B">
+		<xsd:sequence>
+			<xsd:element name="empleador">
+				<xsd:annotation>
+					<xsd:documentation>Identificación del empleador</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="rut_empleador" type="STRut"/>
+						<xsd:element name="nombre_empleador" type="STTexto" />
+						<xsd:element name="direccion_empleador" type="CTDireccion"/>
+						<xsd:element name="ciiu_empleador" type="STCIIU"/>
+						<xsd:element name="ciiu_texto" type="xsd:string"/>
+						<xsd:element name="n_trabajadores">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="1"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="n_trabajadores_hombre" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="n_trabajadores_mujer" minOccurs="0">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="0"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="tipo_empresa" type="STTipo_empresa"/>
+						<xsd:element name="ciiu2_empleador" type="STCIIU" minOccurs="0"/>
+						<xsd:element name="ciiu2_texto" type="xsd:string" minOccurs="0"/>
+						<xsd:element name="propiedad_empresa">
+							<xsd:simpleType>
+								<xsd:restriction base="STPropiedad_empresa">
+									<xsd:pattern value="1|2" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="telefono_empleador" type="CTTelefono" minOccurs="0"/>
+						<xsd:element name="rut_representante_legal" type="STRut" />
+						<xsd:element name="nombre_representante_legal" type="STTexto" />
+						<xsd:element name="tasa_ds110">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="tasa_ds67">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="0" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+						<xsd:element name="ultima_eval_ds67" type="STUltimaEvaluacionTasa" />
+						<xsd:element name="nro_sucursales" type="xsd:nonNegativeInteger" />
+						<xsd:element name="promedio_anual_trabajadores" >
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:decimal">
+									<xsd:minInclusive value="1" />
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_S.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Definiciones de tipos de datos para la zona S del SISESAT - RALF</Titulo>
+				<Autor>BinaryBag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-19</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha/>
+					<Colaborador/>
+					<modificaciones/>
+				</Modificado>
+				<Descripcion>Zona de uso y responsabilidad exclusiva del profesional</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CT_ZONA_S">
+		<xsd:sequence>
+			 <xsd:element name="cumplimiento_medidas">
+				<xsd:annotation>
+					<xsd:documentation>Información de cumplimiento de medidas prescritas</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="medidas" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="cumplimiento_medida" type="CTCumplimientoMedida" maxOccurs="unbounded" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="fecha_verificacion" type="xsd:date" />
+						<xsd:element name="documentos_anexos">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="documento_anexo" type="CTAnexo" maxOccurs="unbounded" />
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="verificador" type="CTPersonaRALF" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

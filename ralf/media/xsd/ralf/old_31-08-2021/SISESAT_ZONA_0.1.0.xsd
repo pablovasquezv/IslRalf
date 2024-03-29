@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="../SISESAT_TYPES_1.0.xsd"/>
+	<xsd:annotation>
+		<xsd:appinfo>
+			<archivo>SISESAT_ZONA_0.1.0.xsd</archivo>
+			<metadatos>
+				<Titulo>Bitacora RALF</Titulo>
+				<Autor>Binary Bag</Autor>
+				<Institucion>SuperIntendencia de Seguridad Social (SUSESO)</Institucion>
+				<Creacion>2012-10-12</Creacion>
+				<Estado>Activo</Estado>
+				<Version>1.0</Version>
+				<!-- Repetir elemento Modificado cuantas veces sea necesario de acuerdo a futuras modificaciones -->
+				<Modificado>
+					<fecha>2012-10-12</fecha>
+					<Colaborador>Jong Bor Lee</Colaborador>
+					<modificaciones>Creacion</modificaciones>
+				</Modificado>
+				<Descripcion>Bitacora de cambios hechos sobre documento consolidado RALF</Descripcion>
+			</metadatos>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:complexType name="CTEstado_RALF">
+		<xsd:sequence>
+			<xsd:element name="fecha" type="xsd:dateTime" />
+			<xsd:element name="ralf_id" type="STRALF_id" />
+			<xsd:element name="accion" type="STAccion" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="CT_ZONA_0">
+		<xsd:sequence>
+			<xsd:element name="cun" type="STCUN" />
+			<xsd:element name="cod_entidad_informante" />
+			<xsd:element name="estados">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="estado" type="CTEstado_RALF" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
